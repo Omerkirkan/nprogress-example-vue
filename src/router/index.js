@@ -21,9 +21,9 @@ const routes = [
     path: '/example',
     name: 'example',
     component: () => import(/* webpackChunkName: "example" */ '../views/ExampleView.vue'),
-    props: true,
+    // props: true, // if you want to pass route params to the component 
     beforeEnter: (to, from, next) => {
-      nProgress.start()
+      nProgress.start();
       store.dispatch('getDatas').then(() => {
         nProgress.done()
         next()
