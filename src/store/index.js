@@ -8,7 +8,12 @@ export default createStore({
   mutations: {
   },
   actions: {
+    getDatas() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve()
+        }, 2000)
+      })
+    }
   },
-  modules: {
-  }
 })
